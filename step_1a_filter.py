@@ -15,6 +15,20 @@ args = parser.parse_args()
 # ******************* Parameters ********************************
 output_name = 'Dataset_filtered_step_1'
 
+# ******************* Functions ********************************
+def remove_duplicates(df_new : pd.DataFrame, df_old : pd.DataFrame) -> pd.DataFrame:
+    list_to_remove = []
+    old_PSTW_IDs= list(df_old.iloc['PSTW ID'].values())
+    old_names= list(df_old.iloc['PSTW ID'].values())
+    new_names = list(df_new.iloc['Name'].values())
+    for n, item in enumerate( df_new.iloc['PSTW ID'].values()):
+        if item in old_PSTW_IDs:
+            if new_names[n] in old_names:
+                list_to_remove.append(item)
+            else:
+                print(f"PSTW ID {item} with name {new_names[n]} does not exist in old names")
+       # remove list_to_remove from df_new and return df_new
+
 # ******************* Packages ********************************
 import pandas as pd
 
