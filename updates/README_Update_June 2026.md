@@ -1,4 +1,4 @@
-# Catalogue of AI Tools in Government — April 2026 Update
+# Catalogue of AI Tools in Government — June 2026 Update
 
 ## Overview
 This document details the steps taken to update and filter the PSTW dataset, ensuring accuracy and relevance. The process involved comparing the December 2025 curated dataset with the April 2026 PSTW export, followed by manual review and automated filtering, and the addition of manually sourced entries.
